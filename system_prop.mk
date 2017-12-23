@@ -42,11 +42,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0 \
-    ro.sf.lcd_density=420
+    ro.sf.lcd_density=480
 
 # Factory Reset Protection
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.frp.pst=/dev/block/bootdevice/by-name/frp
+   ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -97,6 +97,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false
+
+# SDCard FS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=false
+
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
